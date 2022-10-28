@@ -59,7 +59,7 @@ class MariadbContainer(Container):
 
         if utils.is_true(config.include_project_name):
             project_name = self.project_name
-            if project_name != "":
+            if project_name != "" and project_name is not None:
                 destination /= project_name
 
         destination /= self.service_name
@@ -118,7 +118,7 @@ class MysqlContainer(Container):
 
         if utils.is_true(config.include_project_name):
             project_name = self.project_name
-            if project_name != "":
+            if project_name != "" and project_name is not None:
                 destination /= project_name
 
         destination /= self.service_name
@@ -178,7 +178,7 @@ class PostgresContainer(Container):
 
         if utils.is_true(config.include_project_name):
             project_name = self.project_name
-            if project_name != "":
+            if project_name != "" and project_name is not None:
                 destination /= project_name
 
         destination /= self.service_name
